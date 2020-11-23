@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import styled from '@emotion/styled';
 
 import backgroundImage from '../assets/images';
@@ -17,6 +19,14 @@ const Container = styled.div({
   justifyContent: 'space-between',
   fontFamily: 'Black Han Sans, sans-serif',
   fontWeight: 'bold',
+  '& a': {
+    textDecoration: 'none',
+    lineHeight: '150px',
+    color: 'white',
+    width: '100%',
+    height: '100%',
+    display: 'block',
+  },
 });
 
 const Wrapper = styled.div({
@@ -78,7 +88,9 @@ export default function HomePage() {
             <P>우리 강아지에게 주는 첫 선물!</P>
             <P>강아지 작명소가 도와드릴게요.</P>
           </Content>
-          <Button type="button">시작</Button>
+          <Button type="button">
+            <Link to="/result">시작</Link>
+          </Button>
         </Wrapper>
       </Container>
     </div>
