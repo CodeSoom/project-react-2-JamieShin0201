@@ -1,7 +1,12 @@
 import React from 'react';
 
+import UsersPage from './pages/UsersPage';
+
 export default function App() {
   return (
-    <h1>Hello world!!</h1>
+    <div>
+      <h1>Eatgo Admin</h1>
+      <UsersPage />
+    </div>
   );
 }
