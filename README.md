@@ -20,7 +20,7 @@ npm run lint
 
 ## Test
 
-### Integration teest
+### Integration test
 
 ```bash
 npm test
