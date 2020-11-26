@@ -3,10 +3,12 @@ import { getDefaultMiddleware } from '@reduxjs/toolkit';
 import configureStore from 'redux-mock-store';
 
 import {
-  loadRestaurants,
   loadUsers,
-  setRestaurants,
+  loadRestaurants,
+  loadVisitorCounts,
   setUsers,
+  setRestaurants,
+  setVisitorCounts,
 } from './slice';
 
 const middlewares = getDefaultMiddleware();
@@ -42,6 +44,20 @@ describe('actions', () => {
       const actions = store.getActions();
 
       expect(actions[0]).toEqual(setRestaurants([]));
+    });
+  });
+
+  describe('loadVisitorCounts', () => {
+    beforeEach(() => {
+      store = mockStore({});
+    });
+
+    it('runs setVisitorCounts', async () => {
+      await store.dispatch(loadVisitorCounts());
+
+      const actions = store.getActions();
+
+      expect(actions[0]).toEqual(setVisitorCounts([]));
     });
   });
 });

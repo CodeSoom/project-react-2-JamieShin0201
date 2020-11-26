@@ -20,6 +20,7 @@ export default function RestaurantsContainer() {
       <p>식당이 없습니다.</p>
     );
   }
+
   return (
     <ul>
       {restaurants.map(({

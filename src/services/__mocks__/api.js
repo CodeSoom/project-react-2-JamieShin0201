@@ -5,3 +5,7 @@ export async function fetchUsers() {
 export async function fetchRestaurants() {
   return [];
 }
+
+export async function fetchVisitorCounts() {
+  return [];
+}
