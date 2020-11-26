@@ -1,10 +1,10 @@
 import users from '../data/users';
+import restaurants from '../data/restaurants';
 
 export async function fetchUsers() {
   return users;
 }
 
-// TODO : delete
-export function xxxx() {
-  return 'xxx';
+export async function fetchRestaurants() {
+  return restaurants;
 }
