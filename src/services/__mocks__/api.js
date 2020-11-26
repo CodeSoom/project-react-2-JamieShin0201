@@ -2,7 +2,6 @@ export async function fetchUsers() {
   return [];
 }
 
-// Todo : delete
-export async function xxx() {
+export async function fetchRestaurants() {
   return [];
 }
