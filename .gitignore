@@ -1,1 +1,8 @@
-node_modules
+# Node.js
+node_modules/
+
+# Webpack
+dist/
+
+# Jest
+coverage/
