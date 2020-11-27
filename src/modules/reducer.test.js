@@ -1,6 +1,7 @@
 import reducer, {
   setUsers,
   setRestaurants,
+  setVisitorCounts,
 } from './slice';
 
 describe('reducer', () => {
@@ -8,6 +9,7 @@ describe('reducer', () => {
     const initialState = {
       users: [],
       restaurants: [],
+      visitorCounts: [],
     };
 
     it('returns initialState', () => {
@@ -60,6 +62,32 @@ describe('reducer', () => {
       const state = reducer(initialState, setRestaurants(restaurants));
 
       expect(state.restaurants).toHaveLength(1);
+    });
+  });
+
+  describe('setVisitorCounts', () => {
+    it('changes visitorCounts', () => {
+      const initialState = {
+        visitorCounts: [],
+      };
+
+      const visitorCounts = [
+        {
+          date:
+          {
+            year: 2020,
+            month: 11,
+            day: 26,
+            hour: 9,
+            min: 55,
+          },
+          count: 700,
+        },
+      ];
+
+      const state = reducer(initialState, setVisitorCounts(visitorCounts));
+
+      expect(state.visitorCounts).toHaveLength(1);
     });
   });
 });
