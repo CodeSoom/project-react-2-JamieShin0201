@@ -22,6 +22,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'main.js',
-    publicPath: '/',
+    publicPath: '/project-react-2-JamieShin0201',
   },
 };
