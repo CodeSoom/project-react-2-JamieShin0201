@@ -9,15 +9,11 @@ import {
 
 export default function VisitorCountsChart({ visitorCounts }) {
   function makeDataforChart(value) {
-    let data = [];
-
-    value.forEach(({
+    const data = value.map(({
       date: {
         year, month, day, hour, min,
       }, count,
-    }) => {
-      data = [...data, { x: new Date(year, month, day, hour, min), y: count }];
-    });
+    }) => ({ x: new Date(year, month, day, hour, min), y: count }));
 
     return data;
   }

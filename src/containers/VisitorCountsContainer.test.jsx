@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import VisitorCountsContainer from './VisitorCountsContainer';
 
-import VISITORCOUNTS from '../../fixtures/visitorCounts';
+import VISITOR_COUNTS from '../../fixtures/visitorCounts';
 
 jest.mock('react-redux');
 
@@ -30,7 +30,7 @@ describe('VisitorCountsContainer', () => {
   });
 
   context('with visitorCounts', () => {
-    given('visitorCounts', () => (VISITORCOUNTS));
+    given('visitorCounts', () => (VISITOR_COUNTS));
 
     it('renders visitorCounts chart', () => {
       const { container } = renderVisitorCountsContainer();
@@ -41,6 +41,7 @@ describe('VisitorCountsContainer', () => {
 
   context('without visitorCounts', () => {
     given('visitorCounts', () => ([]));
+
     it('renders no visitorCounts message', () => {
       const { container } = renderVisitorCountsContainer();
 

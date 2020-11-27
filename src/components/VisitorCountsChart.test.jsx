@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 
 import VisitorCountsChart from './VisitorCountsChart';
 
-import VISITORCOUNTS from '../../fixtures/visitorCounts';
+import VISITORS_COUNT from '../../fixtures/visitorCounts';
 
 describe('VisitorCountsChart', () => {
   function renderVisitorCountsChart(visitorCounts) {
@@ -15,7 +15,7 @@ describe('VisitorCountsChart', () => {
 
   context('with visitorCounts', () => {
     it('renders visitorCounts chart', () => {
-      renderVisitorCountsChart(VISITORCOUNTS);
+      renderVisitorCountsChart(VISITORS_COUNT);
     });
   });
 });

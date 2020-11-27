@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import { isEmpty } from 'lodash';
+
 import { loadVisitorCounts } from '../modules/slice';
 
 import { get } from '../modules/utils';
@@ -17,7 +19,7 @@ export default function VisitorCountsContainer() {
 
   const visitorCounts = useSelector(get('visitorCounts'));
 
-  if (!visitorCounts || visitorCounts.length === 0) {
+  if (isEmpty(visitorCounts)) {
     return (
       <p>방문자 수가 없습니다.</p>
     );
