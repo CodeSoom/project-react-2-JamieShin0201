@@ -17,9 +17,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   devServer: {
-    historyApiFallback: {
-      index: 'index.html',
-    },
+    historyApiFallback: true,
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -30,6 +28,5 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'main.js',
-    publicPath: '/project-react-2-JamieShin0201',
   },
 };
