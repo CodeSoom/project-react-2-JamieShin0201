@@ -1,5 +1,11 @@
 # Eatgo Admin
 
+## 소개
+
+
+## 주소
+[https://codesoom.github.io/project-react-2-JamieShin0201/] (https://codesoom.github.io/project-react-2-JamieShin0201/)
+
 ## Install dependencies
 
 ```bash
