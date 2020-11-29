@@ -19,9 +19,4 @@ module.exports = {
       index: 'index.html',
     },
   },
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'main.js',
-    publicPath: '/project-react-2-JamieShin0201',
-  },
 };
