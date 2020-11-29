@@ -29,14 +29,9 @@ export default function App() {
       </ul>
       <Switch>
         <Route exact path="/" component={VisitorCountsPage} />
-      </Switch>
-      <Switch>
         <Route exact path="/users" component={UsersPage} />
-      </Switch>
-      <Switch>
         <Route exact path="/restaurants" component={RestaurantsPage} />
       </Switch>
-
     </div>
   );
 }
