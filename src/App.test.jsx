@@ -1,5 +1,9 @@
 import React from 'react';
 
+import {
+  MemoryRouter,
+} from 'react-router-dom';
+
 import { render } from '@testing-library/react';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,12 +22,39 @@ describe('App', () => {
 
     useSelector.mockImplementation((selector) => selector({
       users: [],
+      restaurants: [],
     }));
   });
 
-  it("renders 'Eatgo Admin'", () => {
-    const { container } = render(<App />);
+  function renderApp({ path }) {
+    return render((
+      <MemoryRouter initialEntries={[path]}>
+        <App />
+      </MemoryRouter>
+    ));
+  }
 
-    expect(container).toHaveTextContent('Eatgo Admin');
+  context('with path /', () => {
+    it('renders the home page', () => {
+      const { container } = renderApp({ path: '/' });
+
+      expect(container).toHaveTextContent('방문자 수');
+    });
+  });
+
+  context('with path /users', () => {
+    it('renders the restaurants page', () => {
+      const { container } = renderApp({ path: '/users' });
+
+      expect(container).toHaveTextContent('회원이 없습니다.');
+    });
+  });
+
+  context('with path /restaurants', () => {
+    it('renders the restaurants page', () => {
+      const { container } = renderApp({ path: '/restaurants' });
+
+      expect(container).toHaveTextContent('식당이 없습니다.');
+    });
   });
 });
