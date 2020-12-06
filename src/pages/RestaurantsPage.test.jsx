@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import RestaurantsPage from './RestaurantsPage';
 
 import RESTAURANTS from '../../fixtures/restaurants';
+import CATEGORIES from '../../fixtures/categories';
+import RESTAURANT_FIELDS from '../../fixtures/restaurantFields';
 
 jest.mock('react-redux');
 
@@ -25,7 +27,9 @@ describe('RestaurantsPage', () => {
     useDispatch.mockImplementation(() => dispatch);
 
     useSelector.mockImplementation((selector) => selector({
+      categories: CATEGORIES,
       restaurants: given.restaurants,
+      restaurantFields: RESTAURANT_FIELDS,
     }));
   });
 

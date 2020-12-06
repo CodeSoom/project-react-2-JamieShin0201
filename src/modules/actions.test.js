@@ -4,9 +4,11 @@ import configureStore from 'redux-mock-store';
 
 import {
   loadUsers,
+  loadCategories,
   loadRestaurants,
   loadVisitorCounts,
   setUsers,
+  setCategories,
   setRestaurants,
   setVisitorCounts,
 } from './slice';
@@ -18,6 +20,20 @@ jest.mock('../services/api');
 
 describe('actions', () => {
   let store;
+
+  describe('loadCategories', () => {
+    beforeEach(() => {
+      store = mockStore({});
+    });
+
+    it('runs setCategories', async () => {
+      await store.dispatch(loadCategories());
+
+      const actions = store.getActions();
+
+      expect(actions[0]).toEqual(setCategories([]));
+    });
+  });
 
   describe('loadUsers', () => {
     beforeEach(() => {
