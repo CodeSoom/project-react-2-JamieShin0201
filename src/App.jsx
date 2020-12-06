@@ -9,6 +9,7 @@ import {
 import UsersPage from './pages/UsersPage';
 import RestaurantsPage from './pages/RestaurantsPage';
 import VisitorCountsPage from './pages/VisitorCountsPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <Route exact path="/" component={VisitorCountsPage} />
         <Route exact path="/users" component={UsersPage} />
         <Route exact path="/restaurants" component={RestaurantsPage} />
+        <Route component={NotFoundPage} />
       </Switch>
     </div>
   );

@@ -57,4 +57,12 @@ describe('App', () => {
       expect(container).toHaveTextContent('식당이 없습니다.');
     });
   });
+
+  context('with invalid path', () => {
+    it('renders the not found page', () => {
+      const { container } = renderApp({ path: '/invalid' });
+
+      expect(container).toHaveTextContent('404 Not Found');
+    });
+  });
 });
