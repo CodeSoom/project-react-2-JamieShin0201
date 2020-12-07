@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import VisitorCountsContainer from './VisitorCountsContainer';
 
 import VISITOR_COUNTS from '../../fixtures/visitorCounts';
+import FILTERED_VISITOR_COUNTS from '../../fixtures/filteredVisitorCounts';
 
 jest.mock('react-redux');
 
@@ -26,6 +27,7 @@ describe('VisitorCountsContainer', () => {
 
     useSelector.mockImplementation((selector) => selector({
       visitorCounts: given.visitorCounts,
+      filteredVisitorCounts: FILTERED_VISITOR_COUNTS,
     }));
   });
 

@@ -5,6 +5,7 @@ import {
   fetchCategories,
   fetchRestaurants,
   fetchVisitorCounts,
+  fetchFilteredVisitorCounts,
   // postRestaurant,
 } from '../services/api';
 
@@ -23,6 +24,12 @@ const { actions, reducer } = createSlice({
     categories: [],
     restaurants: [],
     visitorCounts: [],
+    filteredVisitorCounts: {
+      todayCount: 0,
+      yesterdayCount: 0,
+      weekCount: 0,
+      monthCount: 0,
+    },
     restaurantFields: {
       ...initialRestaurantFields,
     },
@@ -52,6 +59,12 @@ const { actions, reducer } = createSlice({
         visitorCounts,
       };
     },
+    setFilteredVisitorCounts(state, { payload: filteredVisitorCounts }) {
+      return {
+        ...state,
+        filteredVisitorCounts,
+      };
+    },
     changeRestaurantFields(state, { payload: { name, value } }) {
       return {
         ...state,
@@ -77,6 +90,7 @@ export const {
   setCategories,
   setRestaurants,
   setVisitorCounts,
+  setFilteredVisitorCounts,
   changeRestaurantFields,
   clearRestaurantFields,
 } = actions;
@@ -102,10 +116,13 @@ export function loadRestaurants() {
   };
 }
 
-export function loadVisitorCounts() {
+export function loadAllVisitorCounts() {
   return async (dispatch) => {
     const visitorCounts = await fetchVisitorCounts();
     dispatch(setVisitorCounts(visitorCounts));
+
+    const filteredVisitorCounts = await fetchFilteredVisitorCounts();
+    dispatch(setFilteredVisitorCounts(filteredVisitorCounts));
   };
 }
 

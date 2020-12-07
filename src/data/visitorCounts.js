@@ -3,7 +3,7 @@ const visitorCounts = [
     date:
     {
       year: 2020,
-      month: 11,
+      month: 10,
       day: 26,
       hour: 9,
       min: 55,
@@ -14,7 +14,7 @@ const visitorCounts = [
     date:
     {
       year: 2020,
-      month: 11,
+      month: 10,
       day: 26,
       hour: 10,
       min: 0,
@@ -25,7 +25,7 @@ const visitorCounts = [
     date:
     {
       year: 2020,
-      month: 11,
+      month: 10,
       day: 26,
       hour: 10,
       min: 5,
@@ -36,7 +36,7 @@ const visitorCounts = [
     date:
     {
       year: 2020,
-      month: 11,
+      month: 10,
       day: 26,
       hour: 10,
       min: 10,
@@ -47,7 +47,7 @@ const visitorCounts = [
     date:
     {
       year: 2020,
-      month: 11,
+      month: 10,
       day: 26,
       hour: 10,
       min: 15,
@@ -58,7 +58,7 @@ const visitorCounts = [
     date:
     {
       year: 2020,
-      month: 11,
+      month: 10,
       day: 26,
       hour: 10,
       min: 20,
@@ -69,7 +69,7 @@ const visitorCounts = [
     date:
     {
       year: 2020,
-      month: 11,
+      month: 10,
       day: 26,
       hour: 10,
       min: 25,
@@ -80,7 +80,7 @@ const visitorCounts = [
     date:
     {
       year: 2020,
-      month: 11,
+      month: 10,
       day: 26,
       hour: 10,
       min: 30,
@@ -91,7 +91,7 @@ const visitorCounts = [
     date:
     {
       year: 2020,
-      month: 11,
+      month: 10,
       day: 26,
       hour: 10,
       min: 35,
@@ -102,12 +102,34 @@ const visitorCounts = [
     date:
     {
       year: 2020,
-      month: 11,
+      month: 10,
       day: 26,
       hour: 10,
       min: 40,
     },
     count: 500,
+  },
+  {
+    date:
+    {
+      year: 2020,
+      month: 11,
+      day: 6,
+      hour: 10,
+      min: 40,
+    },
+    count: 250,
+  },
+  {
+    date:
+    {
+      year: 2020,
+      month: 11,
+      day: 7,
+      hour: 10,
+      min: 40,
+    },
+    count: 300,
   },
 ];
 

@@ -3,6 +3,7 @@ import reducer, {
   setCategories,
   setRestaurants,
   setVisitorCounts,
+  setFilteredVisitorCounts,
   changeRestaurantFields,
   clearRestaurantFields,
 } from './slice';
@@ -14,6 +15,12 @@ describe('reducer', () => {
       categories: [],
       restaurants: [],
       visitorCounts: [],
+      filteredVisitorCounts: {
+        todayCount: 0,
+        yesterdayCount: 0,
+        weekCount: 0,
+        monthCount: 0,
+      },
       restaurantFields: {
         name: '',
         categoryId: 1,
@@ -115,6 +122,30 @@ describe('reducer', () => {
       const state = reducer(initialState, setVisitorCounts(visitorCounts));
 
       expect(state.visitorCounts).toHaveLength(1);
+    });
+  });
+
+  describe('setFilteredVisitorCounts', () => {
+    it('changes filteredVisitorCounts', () => {
+      const initialState = {
+        filteredVisitorCounts: {
+          todayCount: 0,
+          yesterdayCount: 0,
+          weekCount: 0,
+          monthCount: 0,
+        },
+      };
+
+      const filteredVisitorCounts = {
+        todayCount: 10,
+        yesterdayCount: 20,
+        weekCount: 30,
+        monthCount: 40,
+      };
+
+      const state = reducer(initialState, setFilteredVisitorCounts(filteredVisitorCounts));
+
+      expect(state.filteredVisitorCounts.todayCount).toBe(filteredVisitorCounts.todayCount);
     });
   });
 
