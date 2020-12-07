@@ -22,7 +22,9 @@ describe('App', () => {
 
     useSelector.mockImplementation((selector) => selector({
       users: [],
+      categories: [],
       restaurants: [],
+      restaurantFields: {},
     }));
   });
 
