@@ -123,6 +123,8 @@ const Container = styled.section({
 
 const Content = styled.div({
   width: '100%',
+  textAlign: 'center',
+  backgroundColor: '#eceff1',
 });
 
 export default function App() {

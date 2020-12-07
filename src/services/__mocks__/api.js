@@ -14,6 +14,10 @@ export async function fetchVisitorCounts() {
   return [];
 }
 
+export async function fetchFilteredVisitorCounts() {
+  return [];
+}
+
 export async function postRestaurants() {
   return [];
 }

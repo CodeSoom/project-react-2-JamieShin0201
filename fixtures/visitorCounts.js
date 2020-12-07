@@ -109,6 +109,17 @@ const visitorCounts = [
     },
     count: 500,
   },
+  {
+    date:
+    {
+      year: 2020,
+      month: 12,
+      day: 7,
+      hour: 10,
+      min: 40,
+    },
+    count: 500,
+  },
 ];
 
 export default visitorCounts;

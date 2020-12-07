@@ -6,11 +6,12 @@ import {
   loadUsers,
   loadCategories,
   loadRestaurants,
-  loadVisitorCounts,
+  loadAllVisitorCounts,
   setUsers,
   setCategories,
   setRestaurants,
   setVisitorCounts,
+  setFilteredVisitorCounts,
 } from './slice';
 
 const middlewares = getDefaultMiddleware();
@@ -63,17 +64,18 @@ describe('actions', () => {
     });
   });
 
-  describe('loadVisitorCounts', () => {
+  describe('loadAllVisitorCounts', () => {
     beforeEach(() => {
       store = mockStore({});
     });
 
-    it('runs setVisitorCounts', async () => {
-      await store.dispatch(loadVisitorCounts());
+    it('runs setVisitorCounts and setFilteredVisitorCounts', async () => {
+      await store.dispatch(loadAllVisitorCounts());
 
       const actions = store.getActions();
 
       expect(actions[0]).toEqual(setVisitorCounts([]));
+      expect(actions[1]).toEqual(setFilteredVisitorCounts([]));
     });
   });
 });
