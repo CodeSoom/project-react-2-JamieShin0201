@@ -26,9 +26,9 @@ export default function VisitorCountsContainer() {
   }
 
   return (
-    <div>
+    <>
       <h1>방문자 수</h1>
       <VisitorCountsChart visitorCounts={visitorCounts} />
-    </div>
+    </>
   );
 }
